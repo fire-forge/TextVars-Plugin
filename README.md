@@ -1,6 +1,8 @@
 # TextVars Plugin for Godot
 
-TextVars is a Godot plugin that lets you easily insert variables into your text labels through scripts and in the Inspector.
+TextVars is a Godot plugin that lets you easily insert variables into your text labels through scripts and in the Inspector. This plugin was created as a submission to the Godot Add-on Jam #1.
+
+[Get the TextVars plugin on itch.io](https://fire-forge.itch.io/textvars)
 
 ## How to Use:
 * Add the `addons/text_vars/TextVars.gd` script to a Label or RichTextLabel node.
