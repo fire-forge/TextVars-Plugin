@@ -2,7 +2,7 @@ extends EditorInspectorPlugin
 
 const PROPERTY: = "text_vars"
 
-var text_vars_editor_property: = preload("res://addons/text_vars/PropertyEditor/TextVarsEditorProperty.gd")
+var text_vars_editor_property: = preload("../PropertyEditor/TextVarsEditorProperty.gd")
 var editor_interface: EditorInterface
 
 func can_handle(object: Object) -> bool:

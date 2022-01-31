@@ -1,8 +1,8 @@
 tool
 extends EditorProperty
 
-var side_editor_scene: = preload("res://addons/text_vars/PropertyEditor/SideEditor.tscn")
-var main_editor_scene: = preload("res://addons/text_vars/PropertyEditor/MainEditor.tscn")
+var side_editor_scene: = preload("SideEditor.tscn")
+var main_editor_scene: = preload("MainEditor.tscn")
 
 var editor_interface: EditorInterface
 

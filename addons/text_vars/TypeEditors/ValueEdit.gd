@@ -2,9 +2,9 @@ tool
 extends Control
 
 const EDIT_SCENES: = [
-	preload("res://addons/text_vars/TypeEditors/StringEdit.tscn"),
-	preload("res://addons/text_vars/TypeEditors/ColorEdit.tscn"),
-	preload("res://addons/text_vars/TypeEditors/IntEdit.tscn")
+	preload("StringEdit.tscn"),
+	preload("ColorEdit.tscn"),
+	preload("IntEdit.tscn")
 ]
 
 var editor_interface: EditorInterface

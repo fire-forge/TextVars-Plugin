@@ -1,7 +1,7 @@
 tool
 extends Control
 
-var var_item_scene: = preload("res://addons/text_vars/PropertyEditor/VarItem.tscn")
+var var_item_scene: = preload("VarItem.tscn")
 
 var editor_interface: EditorInterface
 var object: TextVars

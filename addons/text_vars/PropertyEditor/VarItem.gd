@@ -3,7 +3,7 @@ extends HBoxContainer
 
 const POPUP_ITEM_INDEXES: = {"String": 0, "Color": 1, "Int": 2, "Remove": 4}
 
-var value_edit_scene: = preload("res://addons/text_vars/TypeEditors/ValueEdit.tscn")
+var value_edit_scene: = preload("../TypeEditors/ValueEdit.tscn")
 
 var editor_interface: EditorInterface
 var value setget, _get_value
