@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/text_vars/PropertyEditor/VarItem.gd" type="Script" id=1]
+
+[node name="VarItem" type="HBoxContainer"]
+margin_right = 152.0
+margin_bottom = 22.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameEdit" type="LineEdit" parent="."]
+margin_right = 66.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+placeholder_text = "Name"
+
+[node name="MenuButton" type="MenuButton" parent="."]
+margin_left = 140.0
+margin_right = 152.0
+margin_bottom = 22.0
+
+[connection signal="focus_exited" from="NameEdit" to="." method="_on_NameEdit_focus_exited"]
+[connection signal="text_entered" from="NameEdit" to="." method="_on_NameEdit_text_entered"]
+[connection signal="text_changed" from="ValueEdit/StringEdit" to="ValueEdit/StringEdit" method="_on_StringEdit_text_changed"]

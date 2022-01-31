@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/text_vars/TypeEditors/IntEdit.gd" type="Script" id=1]
+
+[node name="IntEdit" type="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBox" type="SpinBox" parent="."]
+margin_right = 76.0
+margin_bottom = 40.0
+min_value = -1e+09
+max_value = 1e+09
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="SpinBox" to="." method="_on_SpinBox_value_changed"]

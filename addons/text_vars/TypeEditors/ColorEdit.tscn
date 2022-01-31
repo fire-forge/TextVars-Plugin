@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/text_vars/TypeEditors/ColorEdit.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="ColorEdit" type="PanelContainer"]
+margin_right = 35.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 39.0
+margin_bottom = 26.0
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_right = 39.0
+margin_bottom = 26.0
+
+[node name="HBox" type="HBoxContainer" parent="HBox"]
+margin_right = 26.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="ColorRect" type="ColorRect" parent="HBox/HBox"]
+margin_right = 26.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 26, 26 )
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light1" type="ColorRect" parent="HBox/HBox/ColorRect"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light2" type="ColorRect" parent="HBox/HBox/ColorRect"]
+show_behind_parent = true
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dark1" type="ColorRect" parent="HBox/HBox/ColorRect"]
+show_behind_parent = true
+anchor_right = 0.5
+anchor_bottom = 0.5
+color = Color( 0.662745, 0.662745, 0.662745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dark2" type="ColorRect" parent="HBox/HBox/ColorRect"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.662745, 0.662745, 0.662745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorCode" type="Label" parent="HBox"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 39.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "#ffabcdef"
+valign = 1
+clip_text = true
+uppercase = true
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 39.0
+margin_bottom = 26.0
+flat = true
+
+[connection signal="item_rect_changed" from="HBox/HBox/ColorRect" to="." method="_on_ColorRect_item_rect_changed"]
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
+[connection signal="picker_created" from="ColorPickerButton" to="." method="_on_ColorPickerButton_picker_created"]

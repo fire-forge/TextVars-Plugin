@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/text_vars/TypeEditors/StringEdit.gd" type="Script" id=1]
+
+[node name="StringEdit" type="LineEdit"]
+margin_left = 94.0
+margin_right = 154.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+placeholder_text = "Text"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="text_changed" from="." to="." method="_on_StringEdit_text_changed"]
